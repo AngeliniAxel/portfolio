@@ -1,5 +1,6 @@
 .background {
-  background-color: var(--purple-light);
+  background-color: var(--purple-strong);
+  border-bottom: 1px solid var(--white);
 
   .nav {
     padding: 0.7em;
@@ -10,12 +11,13 @@
 
       &:hover {
         cursor: pointer;
+        background-color: var(--purple-light);
       }
     }
   }
 
   .offcanvas {
-    background-color: var(--purple-light);
+    background-color: var(--purple-strong);
 
     .offcanvas-body {
       .offcanvas-menu {
