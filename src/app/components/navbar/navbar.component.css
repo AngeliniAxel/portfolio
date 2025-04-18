@@ -1,0 +1,31 @@
+.background {
+  background-color: var(--purple-light);
+
+  .nav {
+    padding: 0.7em;
+    border-bottom: none;
+    min-width: 200px;
+    .nav-link {
+      color: #ecf0f1;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .offcanvas {
+    background-color: var(--purple-light);
+
+    .offcanvas-body {
+      .offcanvas-menu {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  label {
+    color: var(--white);
+  }
+}

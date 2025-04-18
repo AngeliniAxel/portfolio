@@ -1,0 +1,55 @@
+<nav class="background">
+  <div class="container-lg d-flex align-items-center justify-content-between">
+    <!-- Left side: Navigation links (visible only on medium and larger screens) -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item d-none d-sm-block">
+        <a class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-block">
+        <a class="nav-link">New post</a>
+      </li>
+
+      <!-- Menu button for small screens (opens offcanvas menu) -->
+      <li class="nav-item">
+        <a
+          class="btn nav-link d-sm-none"
+          data-bs-toggle="offcanvas"
+          href="#offcanvas"
+          role="button"
+        >
+          <i class="fa-solid fa-bars fa-lg"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Offcanvas menu (for small screens) -->
+  <div
+    class="offcanvas offcanvas-start"
+    tabindex="-1"
+    id="offcanvas"
+    data-bs-scroll="true"
+  >
+    <div class="offcanvas-header">
+      <!-- Close button for the offcanvas menu -->
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body pt-0">
+      <!-- Offcanvas navigation links -->
+      <ul class="nav nav-tabs offcanvas-menu">
+        <div class="container-fluid"></div>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-dismiss="offcanvas">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-dismiss="offcanvas">New post</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
