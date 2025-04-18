@@ -1,12 +1,22 @@
 :root {
-  --purple-light: #9b59b6;
-  --purple-strong: #8e44ad;
   --white: #ecf0f1;
-  --grey: #7f8c8d;
-  --dark: #2c3e50;
+}
+
+.dark {
+  --background: #2c3e50;
+  --text: #ecf0f1;
+  --primary-color: #8e44ad;
+  --secondary-color: #9b59b6;
+}
+
+.light {
+  --background: #ecf0f1;
+  --text: #2c3e50;
+  --primary-color: #9b59b6;
+  --secondary-color: #8e44ad;
 }
 
 body {
-  background-color: var(--dark);
-  color: var(--white);
+  background-color: var(--background);
+  color: var(--text);
 }
