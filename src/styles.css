@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --purple-light: #9b59b6;
+  --purple-strong: #8e44ad;
+  --white: #ecf0f1;
+  --grey: #7f8c8d;
+  --dark: #2c3e50;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--white);
+}
