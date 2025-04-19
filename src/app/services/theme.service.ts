@@ -20,9 +20,12 @@ export class ThemeService {
 
   // Toggles the theme between 'light' and 'dark'
   // Updates the BehaviorSubject and persists the new theme in localStorage
-  toggleTheme(): void {
+  toggleTheme(): BehaviorSubject<Theme> {
     const newTheme = this.themeSubject.value === 'light' ? 'dark' : 'light';
     this.themeSubject.next(newTheme); // Notify subscribers of the new theme
     localStorage.setItem('theme', newTheme);
+
+    // returns the new theme
+    return this.themeSubject;
   }
 }
