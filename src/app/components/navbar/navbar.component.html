@@ -21,7 +21,21 @@
         </a>
       </li>
     </ul>
-    <button class="btn" (click)="onClick()">theme</button>
+    <div>
+      <!-- Theme toggle button -->
+      <button class="btn toggle-button" (click)="toggleTheme()">
+        <i
+          [class]="
+            currentTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon'
+          "
+        ></i>
+      </button>
+
+      <!-- Language toggle button -->
+      <button class="btn toggle-button" (click)="toggleLanguage()">
+        {{ currentLanguage === "en" ? "Es" : "En" }}
+      </button>
+    </div>
   </div>
 
   <!-- Offcanvas menu (for small screens) -->
