@@ -1,6 +1,6 @@
 .hero {
   color: var(--white);
-  height: 80vh;
+  height: 90vh;
   max-width: 3840px;
   margin: 0 auto;
   background-image: linear-gradient(
@@ -8,7 +8,36 @@
       var(--background-transparent)
     ),
     url("/assets/images/hero.webp");
-  background-size: cover; /* Ensures the image covers the entire element */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .hero-content {
+    padding-top: 250px;
+
+    h1,
+    p {
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    }
+    p {
+      font-size: 1.2rem;
+    }
+
+    img {
+      max-width: 500px;
+      animation: floatImage 3.5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
 }
