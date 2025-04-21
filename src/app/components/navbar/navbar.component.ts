@@ -1,3 +1,4 @@
+import { LanguageService } from './../../services/language.service';
 import { Component, HostListener, inject } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 import { TranslateService } from '@ngx-translate/core';
@@ -10,8 +11,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent {
   themeService = inject(ThemeService);
+  languageService = inject(LanguageService);
   currentTheme = '';
-  currentLanguage: string = 'en';
+  currentLanguage = '';
   isScrolled: boolean = false; // Tracks if the page is scrolled
 
   constructor(private translate: TranslateService) {}
@@ -20,33 +22,21 @@ export class NavbarComponent {
     // Initializes the current theme from the ThemeService
     this.currentTheme = this.themeService.getTheme().value;
 
-    // Initializes the current language from localStorage or defaults to 'en'
-    this.currentLanguage = localStorage.getItem('lang') || 'en';
+    // Initializes the current language from the LanguageService
+    this.currentLanguage = this.languageService.getLanguage().value;
 
     // Sets the initial language for ngx-translate
     this.translate.use(this.currentLanguage);
-
-    // Updates the <html> element's lang attribute for accessibility
-    document.documentElement.lang = this.currentLanguage;
   }
 
   toggleTheme() {
-    // Toggle the theme using ThemeService and update local state
+    // Toggle the theme using ThemeService
     this.currentTheme = this.themeService.toggleTheme().value;
   }
 
   toggleLanguage() {
-    // Toggle between English and Spanish
-    this.currentLanguage = this.currentLanguage === 'en' ? 'es' : 'en';
-
-    // Update ngx-translate language
-    this.translate.use(this.currentLanguage);
-
-    // Persist selected language in localStorage
-    localStorage.setItem('lang', this.currentLanguage);
-
-    // Update the <html> tag's lang attribute accordingly
-    document.documentElement.lang = this.currentLanguage;
+    // Toggle language using LanguageService
+    this.currentLanguage = this.languageService.toggleLanguage().value;
   }
 
   // Listen to the scroll event to detect if the page is scrolled

@@ -3,8 +3,9 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ThemeService } from './services/theme.service';
 import { Subscription } from 'rxjs';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { HeroComponent } from './components/hero/hero.component';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
@@ -14,19 +15,43 @@ import { HeroComponent } from './components/hero/hero.component';
 })
 export class AppComponent {
   themeService = inject(ThemeService);
-  private themeSubscription!: Subscription; // Subscription to listen for theme changes
+  languageService = inject(LanguageService);
+
+  // Subscription to listen for theme and language changes
+  private themeSubscription!: Subscription;
+  private languageSubscription!: Subscription;
+
+  constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    // Subscribes to the theme changes from the ThemeService
+    this.subscribeToThemeChanges();
+    this.subscribeToLanguageChanges();
+  }
+
+  subscribeToThemeChanges() {
     this.themeSubscription = this.themeService.getTheme().subscribe((theme) => {
       document.body.className = theme; // Updates the <body> class to reflect the current theme
     });
+  }
+
+  subscribeToLanguageChanges() {
+    this.languageSubscription = this.languageService
+      .getLanguage()
+      .subscribe((language) => {
+        this.translate.use(language); // Updates the translation language
+        document.documentElement.lang = language; // Updates the <html> lang attribute for accessibility
+      });
   }
 
   ngOnDestroy() {
     // Unsubscribes from the theme observable to prevent memory leaks
     if (this.themeSubscription) {
       this.themeSubscription.unsubscribe();
+    }
+
+    // Unsubscribes from the language observable to prevent memory leaks
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
     }
   }
 }
