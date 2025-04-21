@@ -4,10 +4,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ThemeService } from './services/theme.service';
 import { Subscription } from 'rxjs';
 import { TranslatePipe } from '@ngx-translate/core';
+import { HeroComponent } from './components/hero/hero.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, TranslatePipe],
+  imports: [NavbarComponent, HeroComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

@@ -1,0 +1,14 @@
+.hero {
+  color: var(--white);
+  height: 80vh;
+  max-width: 3840px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      var(--background-transparent)
+    ),
+    url("/assets/images/hero.webp");
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
