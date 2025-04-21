@@ -3,17 +3,17 @@
 }
 
 .dark {
-  --background: #2c3e50;
-  --text: #ecf0f1;
-  --primary-color: #8e44ad;
-  --secondary-color: #9b59b6;
+  --background: black;
+  --background-transparent: rgba(44, 62, 80, 0.5);
+  --text: #e2e8f0;
+  --primary-color: #6b46c1;
 }
 
 .light {
-  --background: #ecf0f1;
-  --text: #2c3e50;
-  --primary-color: #9b59b6;
-  --secondary-color: #8e44ad;
+  --background: #edf2f7;
+  --background-transparent: rgba(236, 240, 241, 0.5);
+  --text: #1a202c;
+  --primary-color: #cdb2fc;
 }
 
 body {
