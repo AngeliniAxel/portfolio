@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -12,6 +12,7 @@ export class NavbarComponent {
   themeService = inject(ThemeService);
   currentTheme = '';
   currentLanguage: string = 'en';
+  isScrolled: boolean = false; // Tracks if the page is scrolled
 
   constructor(private translate: TranslateService) {}
 
@@ -46,5 +47,12 @@ export class NavbarComponent {
 
     // Update the <html> tag's lang attribute accordingly
     document.documentElement.lang = this.currentLanguage;
+  }
+
+  // Listen to the scroll event to detect if the page is scrolled
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    this.isScrolled = scrollTop > 0; // Set to true if scrolled, false otherwise
   }
 }

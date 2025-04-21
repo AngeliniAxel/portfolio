@@ -1,17 +1,40 @@
+.solid {
+  background-color: var(--background);
+  font-size: 1.1rem;
+  .nav-link,
+  .toggle-button {
+    color: var(--text);
+  }
+}
+
+.transparent {
+  background-color: transparent;
+  font-size: 1.7rem;
+  .nav-link,
+  .toggle-button {
+    color: var(--white);
+  }
+}
+
 .background {
-  background-color: var(--primary-color);
-  border-bottom: 1px solid var(--text);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.8s, font-size 0.8s ease;
 
   .nav {
     padding: 0.7em;
     border-bottom: none;
     min-width: 200px;
     .nav-link {
-      color: var(--white);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
 
       &:hover {
         cursor: pointer;
-        background-color: var(--secondary-color);
+        background-color: var(--primary-color);
+        border-color: var(--text);
       }
     }
   }
@@ -26,20 +49,17 @@
       }
     }
   }
-
-  label {
-    color: var(--white);
-  }
 }
 
 .toggle-button {
-  color: var(--white);
+  color: var(--text);
+  font-size: inherit;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 
   &:hover {
     cursor: pointer;
-    border: 1px solid var(--white);
-    background-color: var(--secondary-color);
+    border: 1px solid var(--text);
+    background-color: var(--primary-color);
   }
 }

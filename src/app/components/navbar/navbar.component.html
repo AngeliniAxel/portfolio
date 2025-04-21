@@ -1,4 +1,6 @@
-<nav class="background">
+<nav
+  [class]="{ background: true, transparent: !isScrolled, solid: isScrolled }"
+>
   <div class="container-lg d-flex align-items-center justify-content-between">
     <!-- Left side: Navigation links (visible only on medium and larger screens) -->
     <ul class="nav nav-tabs">
