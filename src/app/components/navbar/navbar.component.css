@@ -22,6 +22,7 @@
   top: 0;
   left: 0;
   transition: background-color 0.8s, font-size 0.8s ease;
+  z-index: 1;
 
   .nav {
     padding: 0.7em;
