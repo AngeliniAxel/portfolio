@@ -15,6 +15,10 @@
   .hero-content {
     padding-top: 250px;
 
+    .hero-text {
+      z-index: 1;
+    }
+
     h1,
     p {
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
@@ -24,7 +28,7 @@
     }
 
     img {
-      max-width: 500px;
+      width: 500px;
       animation: floatImage 3.5s ease-in-out infinite;
     }
   }

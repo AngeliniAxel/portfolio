@@ -29,9 +29,10 @@
   top: 0;
   left: 0;
   transition: background-color 0.8s, font-size 0.8s ease;
-  z-index: 1;
+  z-index: 10;
 
   .nav {
+    z-index: 99;
     padding: 0.7em;
     border-bottom: none;
     min-width: 200px;
