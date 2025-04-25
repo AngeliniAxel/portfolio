@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ThemeService } from './services/theme.service';
 import { Subscription } from 'rxjs';
