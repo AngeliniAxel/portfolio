@@ -1,27 +1,23 @@
-<div class="container skills p-4">
-  <h2>Habilidades</h2>
-  <p>
-    En esta seccion se encuentran mis principales habilidades, tanto en front
-    como back y en la gestion de bases de datos. Cada una de estas competencias
-    refleja mi enfoque en la creación de soluciones escalables, seguras y
-    eficientes, adaptadas a las necesidades modernas del desarrollo de software.
-  </p>
+<div class="skills">
+  <div class="container p-4">
+    <h2>Habilidades</h2>
+    <p>
+      En esta seccion se encuentran mis principales habilidades, tanto en front
+      como back y en la gestion de bases de datos. Cada una de estas
+      competencias refleja mi enfoque en la creación de soluciones escalables,
+      seguras y eficientes, adaptadas a las necesidades modernas del desarrollo
+      de software.
+    </p>
 
-  <swiper-container
-    [slides-per-view]="3"
-    [space-between]="20"
-    [loop]="true"
-    [navigation]="true"
-    [breakpoints]="breakpoints"
-    class="swiper"
-  >
-    @for (skill of skills; track $index) {
-    <swiper-slide>
-      <div class="skill-item">
-        <img class="img-fluid" [src]="skill.img" [alt]="skill.name" />
-        <p>{{ skill.name }}</p>
-      </div>
-    </swiper-slide>
-    }
-  </swiper-container>
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let skill of skills">
+        <ng-template carouselSlide>
+          <div class="skill-item">
+            <img class="img-fluid" [src]="skill.img" [alt]="skill.name" />
+            <p>{{ skill.name }}</p>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
 </div>

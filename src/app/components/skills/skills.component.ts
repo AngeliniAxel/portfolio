@@ -1,12 +1,14 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { Component } from '@angular/core';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { register } from 'swiper/element/bundle';
 
 register();
 
 @Component({
   selector: 'skills',
-  imports: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [NgFor, CarouselModule],
+  schemas: [],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css',
 })
@@ -39,5 +41,28 @@ export class SkillsComponent {
       slidesPerView: 3,
       spaceBetween: 20,
     },
+  };
+
+  customOptions = {
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: true,
+    navText: [
+      '<i class="fas fa-chevron-left"></i>',
+      '<i class="fas fa-chevron-right"></i>',
+    ],
+    responsive: {
+      0: {
+        items: 2,
+      },
+      600: {
+        items: 3,
+      },
+      800: {
+        items: 4,
+      },
+    },
+    slideBy: 1,
   };
 }
