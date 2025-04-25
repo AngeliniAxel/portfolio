@@ -1,0 +1,30 @@
+<div class="projects">
+  <div class="container p-4">
+    <h2>Proyectos</h2>
+    <p>
+      Estos proyectos reflejan mi experiencia en el desarrollo de soluciones
+      escalables usando tecnologías como node.js, Angular, React y MySQL. Cada
+      uno demuestra mi habilidad para integrar funcionalidades modernas y
+      ofrecer una experiencia de usuario óptima.
+    </p>
+    <ul class="nav nav-tabs">
+      @for (project of projects; track $index) {
+      <li class="nav-item">
+        <button
+          [class.active]="selectedTab === $index"
+          class="nav-link"
+          (click)="selectTab($index)"
+        >
+          {{ project.title }}
+        </button>
+      </li>
+      }
+    </ul>
+
+    <div class="tab-content mt-3">
+      <div class="tab-pane active">
+        <p>{{ selectedProject.content }}</p>
+      </div>
+    </div>
+  </div>
+</div>

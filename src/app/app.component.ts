@@ -6,10 +6,11 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { HeroComponent } from './components/hero/hero.component';
 import { LanguageService } from './services/language.service';
 import { SkillsComponent } from './components/skills/skills.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent, HeroComponent, SkillsComponent],
+  imports: [NavbarComponent, HeroComponent, SkillsComponent, ProjectsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

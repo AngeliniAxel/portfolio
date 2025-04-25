@@ -1,0 +1,30 @@
+.projects {
+  background: linear-gradient(var(--primary-color), var(--background));
+}
+
+h2 {
+  color: var(--text);
+  text-shadow: 1px 1px 0 var(--background);
+}
+
+ul {
+  border-bottom: none;
+}
+
+button.nav-link {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: var(--text);
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border-color: var(--text);
+  }
+}
+
+button.nav-link.active {
+  background-color: var(--primary-color);
+  color: var(--text);
+  border-color: var(--text);
+}
