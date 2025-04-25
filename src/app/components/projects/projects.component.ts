@@ -8,9 +8,36 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
   projects = [
-    { title: 'Proyecto 1', content: 'Contenido del Proyecto 1' },
-    { title: 'Proyecto 2', content: 'Contenido del Proyecto 2' },
-    { title: 'Proyecto 3', content: 'Contenido del Proyecto 3' },
+    {
+      title: 'Blog Angular',
+      technologies: ['Angular', 'Bootstrap'],
+      description: 'Contenido del Proyecto 1',
+      githubLink: 'https://github.com/AngeliniAxel/Blog-Angular',
+    },
+    {
+      title: 'Portfolio',
+      technologies: ['Angular', 'Bootstrap'],
+      description: 'Contenido del Proyecto 2',
+      githubLink: 'https://github.com/AngeliniAxel/portfolio',
+    },
+    {
+      title: 'Ecommerce App',
+      technologies: ['React', 'Express.js', 'PostgreSQL'],
+      description: 'Contenido del Proyecto 2',
+      githubLink: 'https://github.com/AngeliniAxel/ecommerceApp',
+    },
+    {
+      title: 'Login Register',
+      technologies: ['React', 'Express.js', 'PostgreSQL'],
+      description: 'Contenido del Proyecto 2',
+      githubLink: 'https://github.com/AngeliniAxel/login-register-template',
+    },
+    {
+      title: 'CV',
+      technologies: ['React', 'Bootstrap'],
+      description: 'Contenido del Proyecto 2',
+      githubLink: 'https://github.com/AngeliniAxel/cv',
+    },
   ];
 
   selectedTab = 0;

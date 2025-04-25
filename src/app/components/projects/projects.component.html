@@ -7,7 +7,9 @@
       uno demuestra mi habilidad para integrar funcionalidades modernas y
       ofrecer una experiencia de usuario óptima.
     </p>
-    <ul class="nav nav-tabs">
+    <ul
+      class="nav nav-tabs d-flex justify-content-center align-content-center flex-column flex-sm-row"
+    >
       @for (project of projects; track $index) {
       <li class="nav-item">
         <button
@@ -22,8 +24,23 @@
     </ul>
 
     <div class="tab-content mt-3">
-      <div class="tab-pane active">
-        <p>{{ selectedProject.content }}</p>
+      <div class="tab-pane active project-card text-center">
+        <h4 class="project-title">
+          {{ selectedProject.title }}
+        </h4>
+        <p class="project-description">{{ selectedProject.description }}</p>
+        <ul class="project-technologies">
+          @for (technology of selectedProject.technologies; track $index) {
+          <span class="badge">{{ technology }}</span>
+          }
+        </ul>
+        <a
+          class="btn btn-primary"
+          [href]="selectedProject.githubLink"
+          target="_blank"
+        >
+          <i class="fas fa-code"></i> Ver Código
+        </a>
       </div>
     </div>
   </div>
