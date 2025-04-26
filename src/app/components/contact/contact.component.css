@@ -1,0 +1,49 @@
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+
+  textarea {
+    resize: none;
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 128, 0.25);
+    outline: none;
+  }
+
+  .btn {
+    background-color: var(--primary-color);
+    color: var(--text);
+    border-color: var(--text);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--background);
+    }
+  }
+}
+
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched,
+#message.ng-valid.ng-touched {
+  border: 1px solid rgb(112, 226, 112);
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+#message.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+small {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}

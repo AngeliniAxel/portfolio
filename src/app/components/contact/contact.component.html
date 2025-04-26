@@ -1,0 +1,73 @@
+<div class="container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label" for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+      />
+      @if(checkError('name', 'required')) {
+      <small>This field is required</small>
+      } @if(checkError('name', 'minlength') || checkError('name', 'maxlength'))
+      {
+      <small>The name must be between 3 and 15 characters</small>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="lastName">Lastname</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        formControlName="lastName"
+      />
+      @if(checkError('lastName', 'required')) {
+      <small>This field is required</small>
+      } @if(checkError('lastName', 'minlength') || checkError('lastName',
+      'maxlength')) {
+      <small>The lastName must be between 3 and 15 characters</small>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+      @if(checkError('email', 'required')) {
+      <small>This field is required</small>
+      } @if(checkError('email', 'pattern') ) {
+      <small>Invalid email address</small>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="message">Message</label>
+      <textarea
+        class="form-control"
+        rows="5"
+        id="message"
+        formControlName="message"
+      ></textarea>
+      @if(checkError('message', 'required')) {
+      <small>This field is required</small>
+      } @if(checkError('message', 'minlength') || checkError('message',
+      'maxlength')) {
+      <small>The message must be between 5 and 1500 characters</small>
+      }
+    </div>
+
+    <input
+      type="submit"
+      value="Send"
+      class="btn btn-info align-self-center"
+      [disabled]="contactForm.invalid"
+    />
+  </form>
+</div>
