@@ -5,6 +5,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'contact',
@@ -47,6 +48,23 @@ export class ContactComponent {
   }
 
   onSubmit() {
-    console.log(this.contactForm.value);
+    emailjs
+      .send(
+        'service_o7tn0pk', // Reemplaza con tu Service ID
+        'template_681or6h', // Reemplaza con tu Template ID
+        this.contactForm.value,
+        'aTT_lfwZBVWiKe9fQ' // Reemplaza con tu Public Key
+      )
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+          this.contactForm.reset(); // Limpia el formulario
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          alert('Failed to send the message. Please try again later.');
+        }
+      );
   }
 }
