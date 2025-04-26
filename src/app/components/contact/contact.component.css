@@ -47,3 +47,34 @@ small {
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }
+
+.form-floating .form-control {
+  padding-left: 1rem;
+}
+
+.form-floating label {
+  padding-left: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-floating .form-control:focus ~ label,
+.form-floating .form-control:not(:placeholder-shown) ~ label {
+  transform: translateY(-15%);
+  font-size: 0.85rem;
+}
+
+.form-floating textarea {
+  height: auto;
+  padding-left: 1rem;
+}
+
+.form-floating textarea ~ label {
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+}
+
+.form-floating #message:focus ~ label,
+.form-floating #message:not(:placeholder-shown) ~ label {
+  transform: translate(1%, -8%);
+  font-size: 0.85rem;
+}
