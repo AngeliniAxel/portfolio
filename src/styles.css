@@ -7,6 +7,7 @@
   --background-transparent: rgba(44, 62, 80, 0.5);
   --text: #e2e8f0;
   --primary-color: #6b46c1;
+  --secondary-color: #1abc9c;
 }
 
 .light {
@@ -14,9 +15,14 @@
   --background-transparent: rgba(236, 240, 241, 0.5);
   --text: #1a202c;
   --primary-color: #cdb2fc;
+  --secondary-color: #16a085;
 }
 
 body {
   background-color: var(--background);
   color: var(--text);
+}
+
+html {
+  scroll-padding-top: 60px;
 }
