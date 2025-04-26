@@ -1,1 +1,3 @@
-
+.after-hero {
+  background: linear-gradient(var(--background), var(--primary-color));
+}
