@@ -1,11 +1,11 @@
 import { LanguageService } from './../../services/language.service';
 import { Component, HostListener, inject } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'navbar',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })

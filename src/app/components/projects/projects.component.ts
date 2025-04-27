@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'projects',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })
@@ -11,31 +12,31 @@ export class ProjectsComponent {
     {
       title: 'Blog Angular',
       technologies: ['Angular', 'Bootstrap'],
-      description: 'Contenido del Proyecto 1',
+      description: 'Projects.blog',
       githubLink: 'https://github.com/AngeliniAxel/Blog-Angular',
     },
     {
       title: 'Portfolio',
       technologies: ['Angular', 'Bootstrap'],
-      description: 'Contenido del Proyecto 2',
+      description: 'Projects.portfolio',
       githubLink: 'https://github.com/AngeliniAxel/portfolio',
     },
     {
       title: 'Ecommerce App',
       technologies: ['React', 'Express.js', 'PostgreSQL'],
-      description: 'Contenido del Proyecto 2',
+      description: 'Projects.ecommerce',
       githubLink: 'https://github.com/AngeliniAxel/ecommerceApp',
     },
     {
       title: 'Login Register',
       technologies: ['React', 'Express.js', 'PostgreSQL'],
-      description: 'Contenido del Proyecto 2',
+      description: 'Projects.login',
       githubLink: 'https://github.com/AngeliniAxel/login-register-template',
     },
     {
       title: 'CV',
       technologies: ['React', 'Bootstrap'],
-      description: 'Contenido del Proyecto 2',
+      description: 'Projects.cv',
       githubLink: 'https://github.com/AngeliniAxel/cv',
     },
   ];

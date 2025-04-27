@@ -1,4 +1,38 @@
 {
   "HELLO": "Hola! Soy Axel!",
-  "WELCOME": "Un Desarrollador Web Full-stack viviendo es España."
+  "WELCOME": "Un Desarrollador Web Full-stack viviendo en España.",
+  "NavLinks": {
+    "start": "Inicio",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "Skills": {
+    "title": "Habilidades"
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "blog": "contenido del bloggg",
+    "portfolio": "contenido del portfoliogg",
+    "ecommerce": "contenido del ecommercegg",
+    "login": "contenido del logingg",
+    "cv": "contenido del cvgg",
+    "code": "Ver el código"
+  },
+  "Contact": {
+    "title": "Contáctame",
+    "required": "Este campo es obligatorio",
+    "name": "Nombre",
+    "nameLength": "El nombre debe tener entre 3 y 15 caracteres",
+    "lastName": "Apellido",
+    "lastNameLength": "El apellido debe tener entre 3 y 20 caracteres",
+    "invalidEmail": "Correo electrónico no válido",
+    "message": "Mensaje",
+    "messageLength": "El mensaje debe tener entre 5 y 500 caracteres",
+    "send": "Enviar"
+  },
+  "Notification": {
+    "sent": "Mensaje enviado con éxito! Te responderé en breve!",
+    "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
+  }
 }

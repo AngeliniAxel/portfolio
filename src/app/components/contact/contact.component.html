@@ -1,5 +1,5 @@
 <div class="container py-5" id="contact">
-  <h2 class="text-center mb-4">Contact Me</h2>
+  <h2 class="text-center mb-4">{{ "Contact.title" | translate }}</h2>
   <div class="row justify-content-center align-items-center">
     <!-- Image Section -->
     <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
@@ -26,12 +26,12 @@
                 placeholder="Name"
                 formControlName="name"
               />
-              <label for="name">Name</label>
+              <label for="name">{{ "Contact.name" | translate }}</label>
               @if(checkError('name', 'required')) {
-              <small>This field is required</small>
+              <small>{{ "Contact.required" | translate }}</small>
               } @if(checkError('name', 'minlength') || checkError('name',
               'maxlength')) {
-              <small>The name must be between 3 and 15 characters</small>
+              <small>{{ "Contact.nameLength" | translate }}</small>
               }
             </div>
           </div>
@@ -46,12 +46,12 @@
                 placeholder="Lastname"
                 formControlName="lastName"
               />
-              <label for="lastName">Lastname</label>
+              <label for="lastName">{{ "Contact.lastName" | translate }}</label>
               @if(checkError('lastName', 'required')) {
-              <small>This field is required</small>
+              <small>{{ "Contact.required" | translate }}</small>
               } @if(checkError('lastName', 'minlength') ||
               checkError('lastName', 'maxlength')) {
-              <small>The lastName must be between 3 and 15 characters</small>
+              <small>{{ "Contact.lastNameLength" | translate }}</small>
               }
             </div>
           </div>
@@ -67,9 +67,9 @@
             />
             <label for="email">Email</label>
             @if(checkError('email', 'required')) {
-            <small>This field is required</small>
+            <small>{{ "Contact.required" | translate }}</small>
             } @if(checkError('email', 'pattern') ) {
-            <small>Invalid email address</small>
+            <small>{{ "Contact.invalidEmail" | translate }}</small>
             }
           </div>
 
@@ -82,18 +82,18 @@
               formControlName="message"
               style="height: 150px"
             ></textarea>
-            <label for="message">Message</label>
+            <label for="message">{{ "Contact.message" | translate }}</label>
             @if(checkError('message', 'required')) {
-            <small>This field is required</small>
+            <small>{{ "Contact.required" | translate }}</small>
             } @if(checkError('message', 'minlength') || checkError('message',
             'maxlength')) {
-            <small>The message must be between 5 and 500 characters</small>
+            <small>{{ "Contact.messageLength" | translate }}</small>
             }
           </div>
 
           <input
             type="submit"
-            value="Send"
+            [value]="'Contact.send' | translate"
             class="btn btn-info px-5 py-2"
             [disabled]="contactForm.invalid"
           />

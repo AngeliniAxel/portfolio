@@ -1,6 +1,6 @@
 <div class="projects" id="projects">
   <div class="container p-4">
-    <h2>Proyectos</h2>
+    <h2>{{ "Projects.title" | translate }}</h2>
     <p>
       Estos proyectos reflejan mi experiencia en el desarrollo de soluciones
       escalables usando tecnologías como node.js, Angular, React y MySQL. Cada
@@ -28,7 +28,9 @@
         <h4 class="project-title">
           {{ selectedProject.title }}
         </h4>
-        <p class="project-description">{{ selectedProject.description }}</p>
+        <p class="project-description">
+          {{ selectedProject.description | translate }}
+        </p>
         <ul class="project-technologies">
           @for (technology of selectedProject.technologies; track $index) {
           <span class="badge">{{ technology }}</span>
@@ -39,7 +41,7 @@
           [href]="selectedProject.githubLink"
           target="_blank"
         >
-          <i class="fas fa-code"></i> Ver Código
+          <i class="fas fa-code"></i> {{ "Projects.code" | translate }}
         </a>
       </div>
     </div>

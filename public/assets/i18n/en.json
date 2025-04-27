@@ -1,4 +1,38 @@
 {
-  "HELLO": "Hi! I´m Axel!",
-  "WELCOME": "A Full-stack Web Developer based in Spain."
+  "HELLO": "Hi! I'm Axel!",
+  "WELCOME": "A Full-stack Web Developer based in Spain.",
+  "NavLinks": {
+    "start": "Start",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Skills": {
+    "title": "Skills"
+  },
+  "Projects": {
+    "title": "Projects",
+    "blog": "contenttt del bloggg",
+    "portfolio": "contenttt del portfoliogg",
+    "ecommerce": "contenttt del ecommercegg",
+    "login": "contenttt del logingg",
+    "cv": "contenttt del cvgg",
+    "code": "See the code"
+  },
+  "Contact": {
+    "title": "Contact me",
+    "required": "This field is required",
+    "name": "Name",
+    "nameLength": "The name must be between 3 and 15 characters",
+    "lastName": "Lastname",
+    "lastNameLength": "The Lastname must be between 3 and 20 characters",
+    "invalidEmail": "Invalid email address",
+    "message": "Message",
+    "messageLength": "The message must be between 5 and 500 characters",
+    "send": "Send"
+  },
+  "Notification": {
+    "sent": "Message sent successfully! I will respond to you shortly!",
+    "error": "Failed to send the message. Please try again later."
+  }
 }

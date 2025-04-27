@@ -6,17 +6,29 @@
   >
     <!-- Left side: Navigation links (visible only on medium and larger screens) -->
     <ul class="nav nav-tabs">
-      <li class="nav-item d-none d-sm-block">
-        <a class="nav-link">Home</a>
+      <li class="nav-item d-none d-md-block">
+        <a class="nav-link" href="#hero">{{ "NavLinks.start" | translate }}</a>
       </li>
-      <li class="nav-item d-none d-sm-block">
-        <a class="nav-link">New post</a>
+      <li class="nav-item d-none d-md-block">
+        <a class="nav-link" href="#skills">{{
+          "NavLinks.skills" | translate
+        }}</a>
+      </li>
+      <li class="nav-item d-none d-md-block">
+        <a class="nav-link" href="#projects">{{
+          "NavLinks.projects" | translate
+        }}</a>
+      </li>
+      <li class="nav-item d-none d-md-block">
+        <a class="nav-link" href="#contact">{{
+          "NavLinks.contact" | translate
+        }}</a>
       </li>
 
       <!-- Menu button for small screens (opens offcanvas menu) -->
       <li class="nav-item">
         <a
-          class="btn nav-link d-sm-none"
+          class="btn nav-link d-md-none"
           data-bs-toggle="offcanvas"
           href="#offcanvas"
           role="button"
@@ -61,12 +73,25 @@
     <div class="offcanvas-body pt-0">
       <!-- Offcanvas navigation links -->
       <ul class="nav nav-tabs offcanvas-menu">
-        <div class="container-fluid"></div>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-dismiss="offcanvas">Home</a>
+        <li class="nav-item" data-bs-dismiss="offcanvas">
+          <a class="nav-link" href="#hero">{{
+            "NavLinks.start" | translate
+          }}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-dismiss="offcanvas">New post</a>
+        <li class="nav-item" data-bs-dismiss="offcanvas">
+          <a class="nav-link" href="#skills">{{
+            "NavLinks.skills" | translate
+          }}</a>
+        </li>
+        <li class="nav-item" data-bs-dismiss="offcanvas">
+          <a class="nav-link" href="#projects">{{
+            "NavLinks.projects" | translate
+          }}</a>
+        </li>
+        <li class="nav-item" data-bs-dismiss="offcanvas">
+          <a class="nav-link" href="#contact">{{
+            "NavLinks.contact" | translate
+          }}</a>
         </li>
       </ul>
     </div>
