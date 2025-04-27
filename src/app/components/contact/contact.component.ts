@@ -6,17 +6,22 @@ import {
   Validators,
 } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Notyf } from 'notyf';
 
 @Component({
   selector: 'contact',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, TranslatePipe],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
   contactForm: FormGroup;
+  notyf: Notyf;
 
-  constructor() {
+  constructor(private translate: TranslateService) {
+    this.notyf = new Notyf({ duration: 4000 });
+
     this.contactForm = new FormGroup({
       name: new FormControl(null, [
         Validators.required,
@@ -50,20 +55,23 @@ export class ContactComponent {
   onSubmit() {
     emailjs
       .send(
-        'service_o7tn0pk', // Reemplaza con tu Service ID
-        'template_681or6h', // Reemplaza con tu Template ID
+        'service_o7tn0pk',
+        'template_681or6h',
         this.contactForm.value,
-        'aTT_lfwZBVWiKe9fQ' // Reemplaza con tu Public Key
+        'aTT_lfwZBVWiKe9fQ'
       )
       .then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
-          alert('Message sent successfully!');
-          this.contactForm.reset(); // Limpia el formulario
+          this.notyf.success({
+            message: this.translate.instant('Notification.sent'),
+            background: '#1abc9c',
+          });
+          this.contactForm.reset();
         },
         (error) => {
           console.error('FAILED...', error);
-          alert('Failed to send the message. Please try again later.');
+          this.notyf.error(this.translate.instant('Notification.error'));
         }
       );
   }

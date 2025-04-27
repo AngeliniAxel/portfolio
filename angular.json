@@ -29,6 +29,7 @@
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "node_modules/notyf/notyf.min.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -41,7 +42,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
