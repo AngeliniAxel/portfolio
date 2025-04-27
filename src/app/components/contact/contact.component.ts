@@ -9,7 +9,7 @@ import emailjs from '@emailjs/browser';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Notyf } from 'notyf';
 
-import { environment } from '../../../environments/environment';
+import { environment } from '../../../environments/environment.prod';
 
 @Component({
   selector: 'contact',
