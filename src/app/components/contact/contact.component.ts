@@ -9,6 +9,8 @@ import emailjs from '@emailjs/browser';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Notyf } from 'notyf';
 
+import { environment } from '../../../environments/environment';
+
 @Component({
   selector: 'contact',
   imports: [ReactiveFormsModule, TranslatePipe],
@@ -55,10 +57,10 @@ export class ContactComponent {
   onSubmit() {
     emailjs
       .send(
-        'service_o7tn0pk',
-        'template_681or6h',
+        environment.emailServiceId,
+        environment.emailTemplateId,
         this.contactForm.value,
-        'aTT_lfwZBVWiKe9fQ'
+        environment.emailPublicKey
       )
       .then(
         (response) => {
