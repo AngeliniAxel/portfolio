@@ -8,15 +8,17 @@
     "contact": "Contact"
   },
   "Skills": {
-    "title": "Skills"
+    "title": "Skills",
+    "description": "In this section, I highlight my key skills in both frontend and backend development, as well as in database management. Each of these competencies reflects my commitment to creating robust, scalable, and secure solutions that meet the current demands of software development. My approach is focused on optimizing application efficiency, ensuring solid performance and a smooth user experience, while also maintaining data integrity and security across every project."
   },
   "Projects": {
     "title": "Projects",
-    "blog": "contenttt del bloggg",
-    "portfolio": "contenttt del portfoliogg",
-    "ecommerce": "contenttt del ecommercegg",
-    "login": "contenttt del logingg",
-    "cv": "contenttt del cvgg",
+    "description": "Each of these projects has given me the opportunity to test and improve my skills in building scalable applications using tools like Node.js, Angular, React, and MySQL. Throughout each experience, I've been able to tackle challenges that have helped me refine my technical abilities, optimize application performance, and enhance user interaction.",
+    "blog": "App that uses services for data management and a form for creating new posts",
+    "portfolio": "This same portfolio was created using Angular, with external libraries like emailjs for form submission",
+    "ecommerce": "Full Stack ecommerce application, with database calls for user creation and cart updates, using Google API for authentication",
+    "login": "User login and registration template, with token creation and cookies for authentication",
+    "cv": "A simple SPA created in React to showcase my old resume and experience",
     "code": "See the code"
   },
   "Contact": {

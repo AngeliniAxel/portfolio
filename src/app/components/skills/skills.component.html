@@ -1,13 +1,7 @@
 <div class="skills" id="skills">
   <div class="container p-4">
     <h2>{{ "Skills.title" | translate }}</h2>
-    <p>
-      En esta seccion se encuentran mis principales habilidades, tanto en front
-      como back y en la gestion de bases de datos. Cada una de estas
-      competencias refleja mi enfoque en la creación de soluciones escalables,
-      seguras y eficientes, adaptadas a las necesidades modernas del desarrollo
-      de software.
-    </p>
+    <p>{{ "Skills.description" | translate }}</p>
 
     <owl-carousel-o [options]="customOptions">
       <ng-container *ngFor="let skill of skills">
