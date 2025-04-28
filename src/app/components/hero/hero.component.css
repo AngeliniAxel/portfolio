@@ -42,7 +42,7 @@
           transition: color 0.3s ease;
 
           &:hover {
-            color: var(--primary-color); /* Cambia el color al pasar el mouse */
+            color: var(--primary-color);
           }
         }
       }
@@ -64,5 +64,17 @@
   }
   100% {
     transform: translateY(-50px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    .hero-content {
+      padding-top: 200px;
+    }
+
+    .hero-text {
+      margin-bottom: 150px;
+    }
   }
 }
