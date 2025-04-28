@@ -83,3 +83,11 @@ small {
   transform: translate(1%, -8%);
   font-size: 0.85rem;
 }
+
+@media (max-width: 768px) {
+  img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+}
