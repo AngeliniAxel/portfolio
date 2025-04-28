@@ -27,6 +27,27 @@
       font-size: 1.2rem;
     }
 
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-right: 10px;
+
+        font-size: 24px;
+
+        a {
+          color: var(--white);
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: var(--primary-color); /* Cambia el color al pasar el mouse */
+          }
+        }
+      }
+    }
+
     img {
       width: 500px;
       animation: floatImage 3.5s ease-in-out infinite;
